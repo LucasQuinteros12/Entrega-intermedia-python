@@ -1,0 +1,22 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block main_content %}
+
+{% for accesory in accesorys %}
+
+<div class="container-fluid">
+
+    <!-- Post preview-->
+    <div class="card-body flex-column">
+        <h4>Nombre: {{ accesory.name }}</h4>
+        <h5>Tipo: {{ accesory.type }}</h5>
+        <h5>Precio: $ {{ accesory.price }}</h5>
+    </div>
+    <!-- Divider-->
+    <hr />
+</div>
+{% endfor %}
+
+{% endblock %}

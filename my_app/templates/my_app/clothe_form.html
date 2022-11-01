@@ -1,0 +1,16 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block main_content %}
+
+<div class="container-fluid">
+    <h1>Añada su Prenda</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Guardar prenda" />
+    </form>
+</div>
+
+{% endblock %}

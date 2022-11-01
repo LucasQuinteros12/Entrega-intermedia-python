@@ -1,0 +1,17 @@
+
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block main_content %}
+
+<div class="container-fluid mt-4">
+    <h1 class="mt-4 mb-4">Añada su auto</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Guardar coche" />
+    </form>
+</div>
+
+{% endblock %}
